@@ -56,13 +56,14 @@ public class Purchase {
         return fieldsToString() + Constants.DELIMITER + getCost();
     }
 
-     @Override
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || !(o instanceof Purchase)) return false;
 
         Purchase purchase = (Purchase) o;
 
-        return name.equals(purchase.name) && price.equals(purchase.price);
+        if (!name.equals(purchase.name)) return false;
+        return price.equals(purchase.price);
     }
 }
