@@ -1,9 +1,15 @@
-package by.gsu.epamlab;
+package by.gsu.epamlab.beans;
+
+import by.gsu.epamlab.factory.RoundingFactory;
 
 import java.math.RoundingMode;
 
 public class Byn implements Comparable<Byn>{
         private int coins;
+
+        public Byn(){
+            this(0);
+        }
 
         public Byn(int value) {
             this.coins = value;

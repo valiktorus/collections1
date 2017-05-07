@@ -1,4 +1,6 @@
-package by.gsu.epamlab;
+package by.gsu.epamlab.beans;
+
+import by.gsu.epamlab.Constants;
 
 public class Purchase {
     private String name;
@@ -12,9 +14,9 @@ public class Purchase {
 
     public Purchase(String name, int price, int number) {
         super();
-        setName(name);
-        setPrice(new Byn(price));
-        setNumber(number);
+        this.name = name;
+        this.price = new Byn(price);
+        this.number = number;
     }
 
     public String getName() {
@@ -54,14 +56,13 @@ public class Purchase {
         return fieldsToString() + Constants.DELIMITER + getCost();
     }
 
-    @Override
+     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || !(o instanceof Purchase)) return false;
 
         Purchase purchase = (Purchase) o;
 
-        if (!name.equals(purchase.name)) return false;
-        return price.equals(purchase.price);
+        return name.equals(purchase.name) && price.equals(purchase.price);
     }
 }

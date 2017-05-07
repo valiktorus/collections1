@@ -1,4 +1,6 @@
-package by.gsu.epamlab;
+package by.gsu.epamlab.beans;
+
+import by.gsu.epamlab.Constants;
 
 public class PriceDiscountPurchase extends Purchase {
     private Byn discount;

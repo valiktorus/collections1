@@ -1,4 +1,4 @@
-package by.gsu.epamlab;
+package by.gsu.epamlab.factory;
 
 public class RoundingFactory {
     public enum RoundingMode{
