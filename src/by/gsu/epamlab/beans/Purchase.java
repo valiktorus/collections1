@@ -2,7 +2,7 @@ package by.gsu.epamlab.beans;
 
 import by.gsu.epamlab.Constants;
 
-public class Purchase {
+public class Purchase{
     private String name;
     private Byn price;
     private int number;
@@ -65,5 +65,12 @@ public class Purchase {
 
         if (!name.equals(purchase.name)) return false;
         return price.equals(purchase.price);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + price.hashCode();
+        return result;
     }
 }

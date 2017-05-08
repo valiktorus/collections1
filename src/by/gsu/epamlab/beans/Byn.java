@@ -75,17 +75,22 @@ public class Byn implements Comparable<Byn>{
             return coins;
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-            Byn byn = (Byn) o;
+        Byn byn = (Byn) o;
 
-            return coins == byn.coins;
-        }
+        return coins == byn.coins;
+    }
 
-        @Override
+    @Override
+    public int hashCode() {
+        return coins;
+    }
+
+    @Override
         public String toString() {
             return String.format("%d.%02d", getRubs(), getCoins());
         }

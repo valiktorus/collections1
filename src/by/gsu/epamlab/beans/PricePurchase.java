@@ -2,18 +2,18 @@ package by.gsu.epamlab.beans;
 
 import by.gsu.epamlab.Constants;
 
-public class PriceDiscountPurchase extends Purchase {
+public class PricePurchase extends Purchase {
     private Byn discount;
 
     public Byn getDiscount() {
         return discount;
     }
 
-    public PriceDiscountPurchase() {
+    public PricePurchase() {
         super();
     }
 
-    public PriceDiscountPurchase(String name, int price, int unitsNumber, int discount) {
+    public PricePurchase(String name, int price, int unitsNumber, int discount) {
         super(name, price, unitsNumber);
         this.discount = new Byn(discount);
     }
