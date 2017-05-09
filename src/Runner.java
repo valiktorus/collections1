@@ -83,8 +83,8 @@ public class Runner {
         System.out.println(requiredValue != null ? requiredValue : Constants.IS_NOT_FOUND);
     }
 
-    private static void removeEntries(Map<Purchase, WeekDay> map, EntryChecker<Purchase,WeekDay> checker){
-        Iterator<Map.Entry<Purchase, WeekDay>> iterator = map.entrySet().iterator();
+    private static <K extends Purchase, V extends WeekDay>  void removeEntries(Map<K, V> map, EntryChecker<K, V> checker){
+        Iterator<Map.Entry<K, V>> iterator = map.entrySet().iterator();
         while (iterator.hasNext()){
             if(checker.check(iterator.next())){
                 iterator.remove();
