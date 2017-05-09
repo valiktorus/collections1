@@ -1,7 +1,4 @@
-package by.gsu.epamlab;
-
-import by.gsu.epamlab.beans.Purchase;
-import by.gsu.epamlab.enums.WeekDaysEnum;
+package by.gsu.epamlab.checker;
 
 import java.util.Map;
 
