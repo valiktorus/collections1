@@ -3,10 +3,11 @@ package by.gsu.epamlab.beans;
 import by.gsu.epamlab.Constants;
 
 public class PricePurchase extends Purchase {
+
     private Byn discount;
 
     public PricePurchase() {
-        this("", 0, 0, 0);
+        this(Constants.EMPTY_LINE, 0, 0, 0);
     }
 
     public PricePurchase(String name, int price, int unitsNumber, int discount) {

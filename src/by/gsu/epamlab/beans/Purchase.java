@@ -8,7 +8,7 @@ public class Purchase{
     private int number;
 
     public Purchase() {
-        this("", 0, 0);
+        this(Constants.EMPTY_LINE, 0, 0);
     }
 
     public Purchase(String name, int price, int number) {
