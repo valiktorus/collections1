@@ -10,7 +10,7 @@ public class PricePurchase extends Purchase {
     }
 
     public PricePurchase() {
-        super();
+        this("", 0, 0, 0);
     }
 
     public PricePurchase(String name, int price, int unitsNumber, int discount) {
