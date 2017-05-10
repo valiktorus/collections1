@@ -1,6 +1,6 @@
 package by.gsu.epamlab.enums;
 
 public enum WeekDay {
-    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
 
 }
