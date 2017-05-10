@@ -10,7 +10,6 @@ import java.io.FileReader;
 import java.util.*;
 
 public class Runner {
-
     public static void main(String[] args) {
         try(Scanner scanner = new Scanner(new FileReader(GeneralConstants.FILE_NAME))){
             Map<Purchase, WeekDay> lastPurchasesMap = new HashMap<>();
