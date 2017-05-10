@@ -59,16 +59,16 @@ public class Purchase{
         if (this == o) {
             return true;
         }
-        if (o == null || !(o instanceof Purchase)){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
 
         Purchase purchase = (Purchase) o;
 
-        if (!name.equals(purchase.name)) {
+        if (name != null ? !name.equals(purchase.name) : purchase.name != null) {
             return false;
         }
-        return price.equals(purchase.price);
+        return price != null ? price.equals(purchase.price) : purchase.price == null;
     }
 
     @Override
