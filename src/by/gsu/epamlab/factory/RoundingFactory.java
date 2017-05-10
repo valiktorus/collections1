@@ -17,8 +17,10 @@ public class RoundingFactory {
                 return (int)(Math.round(value / coef) * coef);
             }
         };
+
         abstract int roundPrice(double value, double coef);
     }
+
     public static int getRoundedPriceFromFactory(double value, java.math.RoundingMode roundingMode, double coef){
         return RoundingMode.valueOf(roundingMode.name()).roundPrice(value,coef);
     }

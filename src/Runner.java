@@ -35,9 +35,9 @@ public class Runner {
             printMap(lastPurchasesMap, Constants.LAST_PURCHASE_MAP);
             printMap(firstPurchaseMap, Constants.FIRST_PURCHASE_MAP);
 
-            findAndPrintValue(firstPurchaseMap, Constants.FIRST_BREAD_PURCHASE);
-            findAndPrintValue(lastPurchasesMap, Constants.FIRST_BREAD_PURCHASE);
-            findAndPrintValue(firstPurchaseMap, Constants.SECOND_BREAD_PURCHASE);
+            findAndPrintValue(firstPurchaseMap, Constants.FIRST_BREAD_PURCHASE, Constants.FIRST_PURCHASE_MAP);
+            findAndPrintValue(lastPurchasesMap, Constants.FIRST_BREAD_PURCHASE, Constants.LAST_PURCHASE_MAP);
+            findAndPrintValue(firstPurchaseMap, Constants.SECOND_BREAD_PURCHASE,Constants.FIRST_PURCHASE_MAP);
 
             removeEntries(lastPurchasesMap, new EntryChecker<Purchase, WeekDay>() {
                 @Override
@@ -61,7 +61,7 @@ public class Runner {
 
             printEachDayTotalCost(enumeratedMap);
 
-            findAndPrintValue(enumeratedMap, WeekDay.MONDAY);
+            findAndPrintValue(enumeratedMap, WeekDay.MONDAY, Constants.ENUMERATED_MAP);
 
         } catch (FileNotFoundException e) {
             System.err.println(Constants.FILE_NOT_FOUND);
@@ -71,13 +71,13 @@ public class Runner {
     private static <K, V> void printMap(Map<K, V> map, String title){
         System.out.println(title);
         for (Map.Entry<K, V> entry: map.entrySet()) {
-            System.out.println(entry.getKey() + Constants.EQUALS + entry.getValue());
+            System.out.printf("%s = %s%n",entry.getKey(), entry.getValue());
         }
+        System.out.println();
     }
 
     private static <K, V> void findAndPrintValue(Map<K, V> map, K key, String mapName){
-        System.out.printf("");
-        System.out.print(Constants.REQUIRED_VALUE + key + ":");
+        System.out.printf("Required value %s in %s: ", key, mapName);
         V requiredValue = map.get(key);
         System.out.println(requiredValue != null ? requiredValue : Constants.IS_NOT_FOUND);
     }
