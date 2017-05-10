@@ -1,11 +1,12 @@
 package by.gsu.epamlab.beans;
 
+import by.gsu.epamlab.Constants;
 import by.gsu.epamlab.factory.RoundingFactory;
 
 import java.math.RoundingMode;
 
 public class Byn implements Comparable<Byn>{
-        private int coins;
+    private int coins;
 
         public Byn(){
             this(0);
@@ -96,7 +97,7 @@ public class Byn implements Comparable<Byn>{
 
     @Override
         public String toString() {
-            return String.format("%d.%02d", getRubs(), getCoins());
+            return String.format(Constants.BYN_FORMAT, getRubs(), getCoins());
         }
 
         @Override
