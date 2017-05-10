@@ -35,8 +35,8 @@ public class Runner {
             printMap(lastPurchasesMap, Constants.LAST_PURCHASE_MAP);
             printMap(firstPurchaseMap, Constants.FIRST_PURCHASE_MAP);
 
-            findAndPrintValue(firstPurchaseMap, Constants.BREAD_PURCHASE);
-            findAndPrintValue(lastPurchasesMap, Constants.BREAD_PURCHASE);
+            findAndPrintValue(firstPurchaseMap, Constants.FIRST_BREAD_PURCHASE);
+            findAndPrintValue(lastPurchasesMap, Constants.FIRST_BREAD_PURCHASE);
             findAndPrintValue(firstPurchaseMap, Constants.SECOND_BREAD_PURCHASE);
 
             removeEntries(lastPurchasesMap, new EntryChecker<Purchase, WeekDay>() {

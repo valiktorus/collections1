@@ -4,7 +4,7 @@ public class Constants {
     public static final String FILE_NAME = "src/in.csv";
     public static final String LAST_PURCHASE_MAP = "Last purchase map:";
     public static final String FIRST_PURCHASE_MAP = "First purchase map:";
-    public static final Purchase BREAD_PURCHASE = new Purchase("bread", 155, 0);
+    public static final Purchase FIRST_BREAD_PURCHASE = new Purchase("bread", 155, 0);
     public static final Purchase SECOND_BREAD_PURCHASE = new Purchase("bread", 170, 0);
     public static final String MEAT = "meat";
     public static final String ENUMERATED_MAP = "Enumerated map: ";
