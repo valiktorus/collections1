@@ -7,7 +7,7 @@ import by.gsu.epamlab.beans.Purchase;
 public class PurchasesFactory {
     private final static int PURCHASE_FIELDS_NUMBER = Purchase.class.getDeclaredFields().length;
 
-    public static Purchase getClassFromFactory(String line){
+    public static Purchase getPurchaseFromFactory(String line){
         String[] values = line.split(";");
         String name = values[PurchaseFieldsEnum.NAME.ordinal()];
         int price = Integer.parseInt(values[PurchaseFieldsEnum.PRICE.ordinal()]);

@@ -17,7 +17,7 @@ public class Runner {
             Map<WeekDay, List<Purchase>> enumeratedMap = new EnumMap<>(WeekDay.class);
             List<PricePurchase> pricePurchases = new LinkedList<>();
             while (scanner.hasNextLine()) {
-                Purchase purchase = PurchasesFactory.getClassFromFactory(scanner.nextLine());
+                Purchase purchase = PurchasesFactory.getPurchaseFromFactory(scanner.nextLine());
                 if (purchase.getClass() == PricePurchase.class){
                     pricePurchases.add((PricePurchase) purchase);
                 }
