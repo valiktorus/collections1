@@ -65,7 +65,9 @@ public class Purchase{
 
         Purchase purchase = (Purchase) o;
 
-        if (!name.equals(purchase.name)) return false;
+        if (!name.equals(purchase.name)) {
+            return false;
+        }
         return price.equals(purchase.price);
     }
 
