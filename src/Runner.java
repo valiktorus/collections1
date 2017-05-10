@@ -26,13 +26,10 @@ public class Runner {
                 if (!firstPurchaseMap.containsKey(purchase)){
                     firstPurchaseMap.put(purchase, weekDay);
                 }
-                if (enumeratedMap.containsKey(weekDay)){
-                    enumeratedMap.get(weekDay).add(purchase);
-                }else {
-                    List<Purchase> purchases = new ArrayList<>();
-                    purchases.add(purchase);
-                    enumeratedMap.put(weekDay, purchases);
+                if (!enumeratedMap.containsKey(weekDay)){
+                    enumeratedMap.put(weekDay, new ArrayList<>());
                 }
+                    enumeratedMap.get(weekDay).add(purchase);
             }
 
             printMap(lastPurchasesMap, Constants.LAST_PURCHASE_MAP);
