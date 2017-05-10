@@ -1,6 +1,11 @@
 package by.gsu.epamlab.factory;
 
 public class RoundingFactory {
+
+    private RoundingFactory(){
+
+    }
+
     public enum RoundingMode{
         UP{
             int roundPrice(double value, double coef){
