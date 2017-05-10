@@ -100,7 +100,6 @@ public class Runner {
                 System.out.print(weekDay + Constants.SPACE);
                 printTotalCost(purchaseList);
             }
-
         }
     }
 
