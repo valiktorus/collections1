@@ -6,7 +6,11 @@ public class RoundingFactory {
 
     }
 
-    public enum RoundingMode{
+    public static int getRoundedPriceFromFactory(double value, java.math.RoundingMode roundingMode, double coef){
+        return RoundingMode.valueOf(roundingMode.name()).roundPrice(value,coef);
+    }
+
+    private enum RoundingMode{
         UP{
             int roundPrice(double value, double coef){
                 return (int)(Math.ceil(value / coef) * coef);
@@ -24,9 +28,5 @@ public class RoundingFactory {
         };
 
         abstract int roundPrice(double value, double coef);
-    }
-
-    public static int getRoundedPriceFromFactory(double value, java.math.RoundingMode roundingMode, double coef){
-        return RoundingMode.valueOf(roundingMode.name()).roundPrice(value,coef);
     }
 }
