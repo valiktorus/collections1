@@ -8,12 +8,10 @@ public class Purchase{
     private int number;
 
     public Purchase() {
-        super();
-        name = null;
+        this("", 0, 0);
     }
 
     public Purchase(String name, int price, int number) {
-        super();
         this.name = name;
         this.price = new Byn(price);
         this.number = number;
@@ -58,8 +56,12 @@ public class Purchase{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || !(o instanceof Purchase)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || !(o instanceof Purchase)){
+            return false;
+        }
 
         Purchase purchase = (Purchase) o;
 

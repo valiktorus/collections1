@@ -15,7 +15,7 @@ public class Runner {
             Map<Purchase, WeekDay> lastPurchasesMap = new HashMap<>();
             Map<Purchase, WeekDay> firstPurchaseMap = new HashMap<>();
             Map<WeekDay, List<Purchase>> enumeratedMap = new EnumMap<>(WeekDay.class);
-            List<PricePurchase> pricePurchases = new ArrayList<>();
+            List<PricePurchase> pricePurchases = new LinkedList<>();
             while (scanner.hasNextLine()) {
                 Purchase purchase = PurchasesFactory.getClassFromFactory(scanner.nextLine());
                 if (purchase.getClass() == PricePurchase.class){
@@ -77,6 +77,7 @@ public class Runner {
             System.out.println(entry.getKey() + Constants.EQUALS + entry.getValue());
         }
     }
+
     private static <K, V> void findValue(Map<K, V> map, K key){
         System.out.print(Constants.REQUIRED_VALUE);
         V requiredValue = map.get(key);
