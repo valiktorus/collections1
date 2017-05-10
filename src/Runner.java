@@ -75,8 +75,9 @@ public class Runner {
         }
     }
 
-    private static <K, V> void findAndPrintValue(Map<K, V> map, K key){
-        System.out.print(Constants.REQUIRED_VALUE);
+    private static <K, V> void findAndPrintValue(Map<K, V> map, K key, String mapName){
+        System.out.printf("");
+        System.out.print(Constants.REQUIRED_VALUE + key + ":");
         V requiredValue = map.get(key);
         System.out.println(requiredValue != null ? requiredValue : Constants.IS_NOT_FOUND);
     }

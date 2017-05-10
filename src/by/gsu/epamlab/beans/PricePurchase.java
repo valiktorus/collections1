@@ -5,10 +5,6 @@ import by.gsu.epamlab.Constants;
 public class PricePurchase extends Purchase {
     private Byn discount;
 
-    public Byn getDiscount() {
-        return discount;
-    }
-
     public PricePurchase() {
         this("", 0, 0, 0);
     }
@@ -17,6 +13,11 @@ public class PricePurchase extends Purchase {
         super(name, price, unitsNumber);
         this.discount = new Byn(discount);
     }
+
+    public Byn getDiscount() {
+        return discount;
+    }
+
     @Override
     protected String fieldsToString() {
         return super.fieldsToString() + Constants.DELIMITER + discount;
