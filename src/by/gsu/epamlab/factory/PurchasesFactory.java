@@ -6,7 +6,6 @@ import by.gsu.epamlab.beans.Purchase;
 
 public class PurchasesFactory {
     private final static int PURCHASE_FIELDS_NUMBER = Purchase.class.getDeclaredFields().length;
-    private final static int DISCOUNT_PURCHASE_FIELDS_NUMBER = PURCHASE_FIELDS_NUMBER + PricePurchase.class.getDeclaredFields().length;
 
     public static Purchase getClassFromFactory(String line){
         String[] values = line.split(";");
@@ -16,7 +15,7 @@ public class PurchasesFactory {
         Purchase purchase;
         if (values.length == PURCHASE_FIELDS_NUMBER){
             purchase = new Purchase(name, price, number);
-        }else {
+        } else {
             int discount = Integer.parseInt(values[PurchaseFieldsEnum.DISCOUNT.ordinal()]);
             purchase = new PricePurchase(name, price, number, discount);
         }
