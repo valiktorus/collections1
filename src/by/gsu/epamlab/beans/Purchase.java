@@ -59,7 +59,7 @@ public class Purchase{
         if (this == o) {
             return true;
         }
-        if (o == null || !(getClass().isAssignableFrom(Purchase.class))) {
+        if (o == null || !(o instanceof Purchase)) {
             return false;
         }
 
