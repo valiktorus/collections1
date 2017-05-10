@@ -6,8 +6,6 @@ public class GeneralConstants {
     public static final String FIRST_PURCHASE_MAP = "First purchase map";
     public static final String ENUMERATED_MAP = "Enumerated map ";
 
-
-
     public static final String FILE_NOT_FOUND = "File not Found";
     public static final String IS_NOT_FOUND = "is not found";
 
