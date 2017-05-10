@@ -97,12 +97,12 @@ public class Byn implements Comparable<Byn>{
 
     @Override
     public String toString() {
-            return String.format(Constants.BYN_FORMAT, getRubs(), getCoins());
-        }
+        return String.format(Constants.BYN_FORMAT, getRubs(), getCoins());
+    }
 
     @Override
     public int compareTo(Byn byn) {
-            return this.coins - byn.coins;
-        }
+        return this.coins - byn.coins;
     }
+}
 
