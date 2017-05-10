@@ -35,9 +35,9 @@ public class Runner {
             printMap(lastPurchasesMap, Constants.LAST_PURCHASE_MAP);
             printMap(firstPurchaseMap, Constants.FIRST_PURCHASE_MAP);
 
-            findValue(firstPurchaseMap, Constants.BREAD_PURCHASE);
-            findValue(lastPurchasesMap, Constants.BREAD_PURCHASE);
-            findValue(firstPurchaseMap, Constants.SECOND_BREAD_PURCHASE);
+            findAndPrintValue(firstPurchaseMap, Constants.BREAD_PURCHASE);
+            findAndPrintValue(lastPurchasesMap, Constants.BREAD_PURCHASE);
+            findAndPrintValue(firstPurchaseMap, Constants.SECOND_BREAD_PURCHASE);
 
             removeEntries(lastPurchasesMap, new EntryChecker<Purchase, WeekDay>() {
                 @Override
@@ -61,7 +61,7 @@ public class Runner {
 
             printEachDayTotalCost(enumeratedMap);
 
-            findValue(enumeratedMap, WeekDay.MONDAY);
+            findAndPrintValue(enumeratedMap, WeekDay.MONDAY);
 
         } catch (FileNotFoundException e) {
             System.err.println(Constants.FILE_NOT_FOUND);
@@ -75,7 +75,7 @@ public class Runner {
         }
     }
 
-    private static <K, V> void findValue(Map<K, V> map, K key){
+    private static <K, V> void findAndPrintValue(Map<K, V> map, K key){
         System.out.print(Constants.REQUIRED_VALUE);
         V requiredValue = map.get(key);
         System.out.println(requiredValue != null ? requiredValue : Constants.IS_NOT_FOUND);
